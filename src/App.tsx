@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Profile from "./components/Profile";
+import SocialNetwork from "./components/SocialNetwork";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{
+        height: "100vh",
+        backgroundColor: "hsl(0, 0%, 8%)",
+      }}
+    >
+      <div
+        className="card"
+        style={{
+          width: "22rem",
+          backgroundColor: "hsl(0, 0%, 12%)",
+          color: "hsl(0, 0%, 100%)",
+        }}
+      >
+        <Profile />
+        <SocialNetwork title="GitHub" link="https://github.com/matpaulo" />
+        <SocialNetwork
+          title="LinkedIn"
+          link="https://www.linkedin.com/in/matheus-paulo-291828210/"
+        />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
